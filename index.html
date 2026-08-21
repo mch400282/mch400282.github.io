@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation & Software Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111827;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>AI Developer</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>AI Automation & <span>Software Developer</span></h1>
+
+        <p>
+            I build AI agents, n8n automations, chatbots, websites,
+            mobile applications, and custom software solutions
+            that help businesses grow and automate their workflows.
+        </p>
+
+        <a class="button" href="#contact">Let's Work Together</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I specialize in AI automation and software development.
+                My goal is to help businesses save time, improve efficiency,
+                and grow through modern technology and intelligent automation.
+            </p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>AI Agents</h3>
+                <p>Custom AI agents for business automation and productivity.</p>
+            </div>
+
+            <div class="card">
+                <h3>n8n Automation</h3>
+                <p>Powerful business workflows and process automation using n8n.</p>
+            </div>
+
+            <div class="card">
+                <h3>AI Chatbots</h3>
+                <p>Smart chatbots for websites, WhatsApp, and customer support.</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Professional websites and web applications for businesses.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mobile Apps</h3>
+                <p>Modern mobile application development for different platforms.</p>
+            </div>
+
+            <div class="card">
+                <h3>Lead Generation</h3>
+                <p>Automated lead generation and data collection systems.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's Work Together</h2>
+
+        <div class="contact">
+            <p>
+                Interested in AI automation or software development?
+                Contact me to discuss your project.
+            </p>
+
+            <a class="button" href="mailto:your@email.com">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 AI Automation & Software Developer. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
