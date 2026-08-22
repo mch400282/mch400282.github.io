@@ -1,0 +1,133 @@
+{
+  "name": "1--clender data enter",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -480,
+        -112
+      ],
+      "id": "47507a6e-fe00-49d5-ba78-188f91ee3852",
+      "name": "When chat message received",
+      "webhookId": "5a733c0a-7d4b-477a-939a-3b33036affe1"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=here is the time/date:{{ $now }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -240,
+        -112
+      ],
+      "id": "3a11be9f-f6b0-4fff-983d-f9729936df38",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "mch400282@gmail.com",
+          "mode": "list",
+          "cachedResultName": "mch400282@gmail.com"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {
+          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        96
+      ],
+      "id": "3e02d084-f738-4e9d-806a-9d5012b86313",
+      "name": "Create an event",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "EFAotmGjtJPxRwu1",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        80
+      ],
+      "id": "3f8eefd7-022a-4257-a98f-a8ead4a7ef6c",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "4qKEQxMvDyfCy0tP",
+          "name": "Groq account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an event": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "e18390c4-1493-4fc5-a0fa-fb31ce44a2fb",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "625070bcc5e2355c0f1d7eeb864882d816b527701d43742df27578cce344b952"
+  },
+  "nodeGroups": [],
+  "id": "Qfm4aQWonldXhmFF",
+  "tags": []
+}
